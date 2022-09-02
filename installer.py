@@ -14,7 +14,7 @@ class Installer:
 
     zip_link = "https://github.com/stascorp/rdpwrap/releases/download/v1.6.2/RDPWrap-v1.6.2.zip"
     updater_link = "https://github.com/asmtron/rdpwrap/raw/master/autoupdate.zip"
-    rdp_dir = "C:\\Program Files\\RDP Wrapper test"
+    rdp_dir = "C:\\Program Files\\RDP Wrapper"
 
     def download(self, url: str, target_dir: str) -> None:
         """Download zip from URL and manifest to the target directory"""
@@ -42,11 +42,12 @@ class Installer:
         path = self.rdp_dir + bat_path
         print(f"Executing {path}")
 
+        # start the bats and termine them after
         p = subprocess.Popen(path)
         p.terminate()
-        p.wait()
+        returncode = p.wait()
 
-        print(f"Executed {path} successfully!")
+        print(f"Executed {path} with returncode {returncode}!")
 
     def setup_files(self):
         """Installs and unpacks the zip files"""
