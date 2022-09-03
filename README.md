@@ -10,6 +10,4 @@ I did not modify any of the RDPWrapper functionality or .ini files, the installe
 
 Creating a new local user and getting your the privileges right is still your responsibility.
 
-The script needs to be ran with admin privileges in order to be able to unpack
-
-and move files inside your `C:\\Program Files` directory.
+The script needs to be ran with admin privileges in order to be able to unpack and move files inside your `C:\\Program Files` directory.
