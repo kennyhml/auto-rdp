@@ -99,7 +99,7 @@ class Installer:
 
         self.download(self.zip_link, "images/temp/")
         self.download(self.updater_link, "images/temp/")
-        self.unpack("images/tempautoupdate.zip", self.rdp_dir)
+        self.unpack("images/temp/autoupdate.zip", self.rdp_dir)
         self.unpack("images/temp/RDPWrap-v1.6.2.zip", self.rdp_dir)
 
         print("Files should all be in place!")
